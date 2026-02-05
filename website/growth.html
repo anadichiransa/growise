@@ -1,0 +1,656 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Growth Monitoring &amp; Analysis - Child Care Digitalization</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#DCA06D",
+              "primary-hover": "#c58d5c",
+              "background-light": "#f8f7f6",
+              "background-dark": "#210F37", // Deep Purple user request
+              "surface-dark": "#4F1C51", // Secondary background user request
+              "accent-detail": "#A55B4B", // Highlights user request
+              "text-subtle": "#c1ac9a",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem", 
+              "lg": "0.5rem", 
+              "xl": "0.75rem", 
+              "full": "9999px"
+            },
+            backgroundImage: {
+              'hero-pattern': "linear-gradient(rgba(33, 15, 55, 0.7), rgba(33, 15, 55, 0.9)), url('https://images.unsplash.com/photo-1542037104-5079a6136611?q=80&w=2938&auto=format&fit=crop')",
+              'chart-gradient': "linear-gradient(180deg, rgba(79, 28, 81, 0) 0%, rgba(79, 28, 81, 1) 100%)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #210F37;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F1C51;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A55B4B;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-[#210F37]">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#4F1C51] bg-[#210F37]/95 backdrop-blur-sm">
+<div class="flex h-16 items-center justify-between px-6 lg:px-20 max-w-[1280px] mx-auto w-full">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 text-primary rounded-full bg-surface-dark/50">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<h2 class="text-white text-lg font-bold tracking-tight">Growise</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white text-sm font-bold border-b-2 border-primary py-5" href="growth.html">Growth Analysis</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="health.html">Health Records</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="learn.html">Education</a>
+</nav>
+<div class="flex gap-3">
+<button class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg bg-surface-dark hover:bg-[#5f2360] text-white text-sm font-bold transition-all border border-[#6b2b6d]">
+                      <a href=coming.html>  Log In </a>
+                    </button>
+<button class="flex items-center justify-center h-9 px-4 rounded-lg bg-primary hover:bg-primary-hover text-[#201913] text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+                      <a href =coming.html> Sign Up </a>
+                    </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full relative bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center justify-center" data-alt="Mother measuring child height against a wall with warm lighting" style="background-image: linear-gradient(to right, rgba(33, 15, 55, 0.95) 0%, rgba(33, 15, 55, 0.7) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGZbAa7jJrlGcYcXACTcPxlm5UcKk29gtZBNcXkUki-7uuvxjAJIGt7J17Xx2rzL2bwi0S8QWXbb2J7UIFqjbFs345q6TfNbVU57Y-9EbheEjFywTBg5zLyTMdaw8J6vEhbp1rLY5OchAC25MYUfOrSCmgrDweFoSk10Y-Pcn1-uKirg3xv22WNyjJO3kPzEXQnXgH0hvNBjQLSYfdE7niWGDDy-HxxdncZvrdD2q53uezuU_0v0MnAyYlHxfNPxIAT6W-QQ3jtB8');">
+<div class="layout-content-container max-w-[1280px] px-6 lg:px-20 w-full flex flex-col md:flex-row gap-12 items-center">
+<div class="flex flex-col gap-6 max-w-[640px] animate-fade-in-up">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-[#6b2b6d] w-fit">
+<span class="material-symbols-outlined text-primary text-sm">monitor_heart</span>
+<span class="text-xs font-medium text-gray-200">Sri Lankan National Standards Aligned</span>
+</div>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                            Tracking Your Child's <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#f3d1b0]">Journey</span>
+</h1>
+<p class="text-gray-300 text-lg leading-relaxed font-light">
+                            Empower your parenting with precise growth tracking. We blend Sri Lankan Family Health Bureau standards with modern analytics to help you understand every milestone with clarity and confidence.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-2">
+<button class="flex h-12 px-8 items-center justify-center rounded-lg bg-primary hover:bg-primary-hover text-[#210F37] text-base font-bold shadow-lg shadow-primary/25 transition-all">
+<span class="material-symbols-outlined mr-2">show_chart</span>
+                                <a href =coming.html>Start Monitoring Now</a>
+                            </button>
+<button class="flex h-12 px-8 items-center justify-center rounded-lg bg-transparent border border-gray-500 hover:border-white text-white text-base font-medium transition-all">
+                               <a href="#learn"> Learn More
+                            </button>
+</div>
+</div>
+<!-- Abstract Interactive Visualization Graphic -->
+<div class="hidden md:flex flex-1 w-full justify-end relative">
+<div class="relative w-full max-w-[480px] aspect-square bg-surface-dark/30 rounded-2xl border border-surface-dark/50 p-6 backdrop-blur-sm overflow-hidden shadow-2xl">
+<!-- Background Grid Lines -->
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+<!-- Stylized Curve -->
+<svg class="absolute bottom-0 left-0 w-full h-full p-6 text-primary drop-shadow-[0_0_10px_rgba(220,162,111,0.5)]" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,100 C20,90 40,80 50,60 C60,40 80,30 100,20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Point -->
+<circle cx="50" cy="60" fill="#210F37" r="4" stroke="currentColor" stroke-width="3"></circle>
+</svg>
+<!-- Floating Insight Card -->
+<div class="absolute top-1/4 right-4 bg-surface-dark border border-accent-detail/30 p-4 rounded-xl shadow-lg max-w-[200px]">
+<div class="flex items-start gap-3">
+<div class="bg-accent-detail/20 p-1.5 rounded-lg text-accent-detail">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Status</p>
+<p class="text-sm font-medium text-white">Consistent growth aligned with 50th percentile.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Section -->
+<section class="w-full py-20 px-6 lg:px-20 max-w-[1280px]">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-4 max-w-[760px]">
+<h2 class="text-3xl font-bold text-white tracking-tight" id="learn">Why Monitor Growth With Us?</h2>
+<p class="text-gray-400 text-lg">
+                            Our platform offers a comprehensive suite of tools designed specifically for Sri Lankan parents, seamlessly integrating medical standards with intuitive technology.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">National Standards</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Benchmarked against Sri Lanka Family Health Bureau data for accurate local comparisons.
+                                </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">monitoring</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Intuitive Visuals</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Easy-to-read growth curves for Weight-for-Age and Height-for-Age metrics.
+                                </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Seamless Data</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Connect directly with your pediatrician's records or enter measurements manually.
+                                </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Smart Insights</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Get AI-driven tips and alerts based on your child's unique growth velocity.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Demo Section -->
+<section class="w-full bg-surface-dark/20 py-24 border-y border-surface-dark">
+<div class="layout-content-container max-w-[1280px] px-6 lg:px-20 w-full mx-auto">
+<div class="flex flex-col lg:flex-row gap-12 items-start">
+<!-- Chart Container -->
+<div class="flex-1 w-full bg-[#210F37] rounded-2xl border border-surface-dark p-6 shadow-2xl relative overflow-hidden group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                                    Weight-for-Age Chart
+                                </h3>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded text-xs font-medium bg-surface-dark text-gray-300 cursor-pointer">1Y</span>
+<span class="px-2 py-1 rounded text-xs font-bold bg-primary text-[#210F37] cursor-pointer">3Y</span>
+<span class="px-2 py-1 rounded text-xs font-medium bg-surface-dark text-gray-300 cursor-pointer">5Y</span>
+</div>
+</div>
+<!-- Mock Chart Area -->
+<div class="relative h-[360px] w-full bg-surface-dark/20 rounded-lg border border-surface-dark/50 p-4">
+<!-- Grid -->
+<div class="absolute inset-0 grid grid-cols-6 grid-rows-5 gap-0">
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class=""></div>
+</div>
+<!-- Standard Curves (Background lines) -->
+<svg class="absolute inset-0 w-full h-full p-4 pointer-events-none opacity-40" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q25,70 50,40 T100,10" fill="none" stroke="#A55B4B" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M0,90 Q25,80 50,55 T100,25" fill="none" stroke="#22c55e" stroke-width="1"></path>
+<path d="M0,95 Q25,90 50,70 T100,45" fill="none" stroke="#A55B4B" stroke-dasharray="4 4" stroke-width="1"></path>
+</svg>
+<!-- Child's Data Curve (Primary) -->
+<svg class="absolute inset-0 w-full h-full p-4 pointer-events-none drop-shadow-xl" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,92 Q25,85 50,58 T100,30" fill="none" stroke="#DCA06D" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="25" cy="85" fill="#DCA06D" r="1.5"></circle>
+<circle cx="50" cy="58" fill="#DCA06D" r="1.5"></circle>
+<circle cx="100" cy="30" fill="#DCA06D" r="1.5"></circle>
+</svg>
+<!-- Tooltip (Static) -->
+<div class="absolute top-[25%] right-[2%] bg-surface-dark border border-primary/30 p-2 rounded shadow-xl">
+<p class="text-[10px] text-gray-400">Sep 2023</p>
+<p class="text-sm font-bold text-white">14.2 kg</p>
+</div>
+</div>
+</div>
+<!-- Sidebar: Insights & Input -->
+<div class="w-full lg:w-[360px] flex flex-col gap-6">
+<!-- Insight Card -->
+<div class="bg-surface-dark rounded-xl p-6 border-l-4 border-accent-detail shadow-lg">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-detail">notifications_active</span>
+<h4 class="font-bold text-white">Actionable Insight</h4>
+</div>
+<span class="text-[10px] bg-[#210F37] text-gray-400 px-2 py-1 rounded">Just now</span>
+</div>
+<p class="text-sm text-gray-300 mb-4">
+                                    Weight gain has slowed slightly this month. This is common for active toddlers.
+                                </p>
+<div class="bg-[#210F37] rounded p-3">
+<p class="text-xs font-bold text-primary mb-1">Recommendation:</p>
+<p class="text-xs text-gray-400">Increase protein intake. Try introducing eggs or legumes in the morning meal.</p>
+</div>
+</div>
+<!-- Data Input Toggle -->
+<div class="bg-surface-dark/50 rounded-xl p-6 border border-surface-dark">
+<h4 class="font-bold text-white mb-4">Data Source</h4>
+<div class="flex bg-[#210F37] p-1 rounded-lg mb-4">
+<button class="flex-1 py-2 text-sm font-bold rounded-md bg-surface-dark text-white shadow-sm">Manual</button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-gray-400 hover:text-white">Partner Sync</button>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-sm text-gray-400">Weight (kg)</label>
+<input class="bg-[#210F37] border border-surface-dark rounded px-3 py-1 text-right text-white text-sm w-24 focus:border-primary focus:ring-0" type="text" value="14.2"/>
+</div>
+<div class="flex justify-between items-center">
+<label class="text-sm text-gray-400">Height (cm)</label>
+<input class="bg-[#210F37] border border-surface-dark rounded px-3 py-1 text-right text-white text-sm w-24 focus:border-primary focus:ring-0" type="text" value="92.5"/>
+</div>
+<button class="w-full mt-2 py-2 rounded bg-primary/10 text-primary text-sm font-bold border border-primary/20 hover:bg-primary/20 transition-colors">
+                                        Update Record
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<section class="w-full py-16 px-6 lg:px-20 text-center">
+<div class="max-w-[800px] mx-auto flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold text-white">Ready to take charge of their health?</h2>
+<p class="text-gray-400 text-lg max-w-[600px]">
+                        Join thousands of Sri Lankan parents using our digital tools to ensure their children grow happy, healthy, and strong.
+                    </p>
+<button class="mt-4 flex h-14 px-10 items-center justify-center rounded-lg bg-primary hover:bg-primary-hover text-[#210F37] text-lg font-bold shadow-[0_0_20px_rgba(220,162,111,0.3)] transition-all transform hover:-translate-y-1">
+                        Start Tracking for Free
+                    </button>
+<p class="text-xs text-gray-600 mt-4">
+                        Data privacy protected. Compliant with local health regulations.
+                    </p>
+</div>
+</section>
+</main>
+<footer class="w-full border-t border-surface-dark bg-[#1a0b2e] py-8">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-gray-400">
+<span class="material-symbols-outlined text-sm">copyright</span>
+<span class="text-sm">© 2025 Growise. All rights reserved. SDGP CS-149</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-gray-500 hover:text-primary" href="coming.html">Privacy Policy</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="coming.html">Terms of Service</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="index.html#contact">Support</a>
+</div>
+</div>
+</footer>
+</div>
+=======
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Growth Monitoring &amp; Analysis - Child Care Digitalization</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#DCA06D",
+              "primary-hover": "#c58d5c",
+              "background-light": "#f8f7f6",
+              "background-dark": "#210F37", // Deep Purple user request
+              "surface-dark": "#4F1C51", // Secondary background user request
+              "accent-detail": "#A55B4B", // Highlights user request
+              "text-subtle": "#c1ac9a",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem", 
+              "lg": "0.5rem", 
+              "xl": "0.75rem", 
+              "full": "9999px"
+            },
+            backgroundImage: {
+              'hero-pattern': "linear-gradient(rgba(33, 15, 55, 0.7), rgba(33, 15, 55, 0.9)), url('https://images.unsplash.com/photo-1542037104-5079a6136611?q=80&w=2938&auto=format&fit=crop')",
+              'chart-gradient': "linear-gradient(180deg, rgba(79, 28, 81, 0) 0%, rgba(79, 28, 81, 1) 100%)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #210F37;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F1C51;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A55B4B;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display antialiased overflow-x-hidden selection:bg-primary selection:text-[#210F37]">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#4F1C51] bg-[#210F37]/95 backdrop-blur-sm">
+<div class="flex h-16 items-center justify-between px-6 lg:px-20 max-w-[1280px] mx-auto w-full">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 text-primary rounded-full bg-surface-dark/50">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<h2 class="text-white text-lg font-bold tracking-tight">Growise</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white text-sm font-bold border-b-2 border-primary py-5" href="growth.html">Growth Analysis</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="health.html">Health Records</a>
+<a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors" href="learn.html">Education</a>
+</nav>
+<div class="flex gap-3">
+<button class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg bg-surface-dark hover:bg-[#5f2360] text-white text-sm font-bold transition-all border border-[#6b2b6d]">
+                      <a href=coming.html>  Log In </a>
+                    </button>
+<button class="flex items-center justify-center h-9 px-4 rounded-lg bg-primary hover:bg-primary-hover text-[#201913] text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+                      <a href =coming.html> Sign Up </a>
+                    </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full relative bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center justify-center" data-alt="Mother measuring child height against a wall with warm lighting" style="background-image: linear-gradient(to right, rgba(33, 15, 55, 0.95) 0%, rgba(33, 15, 55, 0.7) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGZbAa7jJrlGcYcXACTcPxlm5UcKk29gtZBNcXkUki-7uuvxjAJIGt7J17Xx2rzL2bwi0S8QWXbb2J7UIFqjbFs345q6TfNbVU57Y-9EbheEjFywTBg5zLyTMdaw8J6vEhbp1rLY5OchAC25MYUfOrSCmgrDweFoSk10Y-Pcn1-uKirg3xv22WNyjJO3kPzEXQnXgH0hvNBjQLSYfdE7niWGDDy-HxxdncZvrdD2q53uezuU_0v0MnAyYlHxfNPxIAT6W-QQ3jtB8');">
+<div class="layout-content-container max-w-[1280px] px-6 lg:px-20 w-full flex flex-col md:flex-row gap-12 items-center">
+<div class="flex flex-col gap-6 max-w-[640px] animate-fade-in-up">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-[#6b2b6d] w-fit">
+<span class="material-symbols-outlined text-primary text-sm">monitor_heart</span>
+<span class="text-xs font-medium text-gray-200">Sri Lankan National Standards Aligned</span>
+</div>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                            Tracking Your Child's <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#f3d1b0]">Journey</span>
+</h1>
+<p class="text-gray-300 text-lg leading-relaxed font-light">
+                            Empower your parenting with precise growth tracking. We blend Sri Lankan Family Health Bureau standards with modern analytics to help you understand every milestone with clarity and confidence.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-2">
+<button class="flex h-12 px-8 items-center justify-center rounded-lg bg-primary hover:bg-primary-hover text-[#210F37] text-base font-bold shadow-lg shadow-primary/25 transition-all">
+<span class="material-symbols-outlined mr-2">show_chart</span>
+                                <a href =coming.html>Start Monitoring Now</a>
+                            </button>
+<button class="flex h-12 px-8 items-center justify-center rounded-lg bg-transparent border border-gray-500 hover:border-white text-white text-base font-medium transition-all">
+                               <a href="#learn"> Learn More
+                            </button>
+</div>
+</div>
+<!-- Abstract Interactive Visualization Graphic -->
+<div class="hidden md:flex flex-1 w-full justify-end relative">
+<div class="relative w-full max-w-[480px] aspect-square bg-surface-dark/30 rounded-2xl border border-surface-dark/50 p-6 backdrop-blur-sm overflow-hidden shadow-2xl">
+<!-- Background Grid Lines -->
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+<!-- Stylized Curve -->
+<svg class="absolute bottom-0 left-0 w-full h-full p-6 text-primary drop-shadow-[0_0_10px_rgba(220,162,111,0.5)]" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,100 C20,90 40,80 50,60 C60,40 80,30 100,20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Point -->
+<circle cx="50" cy="60" fill="#210F37" r="4" stroke="currentColor" stroke-width="3"></circle>
+</svg>
+<!-- Floating Insight Card -->
+<div class="absolute top-1/4 right-4 bg-surface-dark border border-accent-detail/30 p-4 rounded-xl shadow-lg max-w-[200px]">
+<div class="flex items-start gap-3">
+<div class="bg-accent-detail/20 p-1.5 rounded-lg text-accent-detail">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Status</p>
+<p class="text-sm font-medium text-white">Consistent growth aligned with 50th percentile.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Section -->
+<section class="w-full py-20 px-6 lg:px-20 max-w-[1280px]">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-4 max-w-[760px]">
+<h2 class="text-3xl font-bold text-white tracking-tight" id="learn">Why Monitor Growth With Us?</h2>
+<p class="text-gray-400 text-lg">
+                            Our platform offers a comprehensive suite of tools designed specifically for Sri Lankan parents, seamlessly integrating medical standards with intuitive technology.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">National Standards</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Benchmarked against Sri Lanka Family Health Bureau data for accurate local comparisons.
+                                </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">monitoring</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Intuitive Visuals</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Easy-to-read growth curves for Weight-for-Age and Height-for-Age metrics.
+                                </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Seamless Data</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Connect directly with your pediatrician's records or enter measurements manually.
+                                </p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-surface-dark bg-surface-dark/40 hover:bg-surface-dark p-6 transition-all duration-300 hover:shadow-xl hover:shadow-[#00000030]">
+<div class="size-12 rounded-lg bg-[#210F37] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">lightbulb</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Smart Insights</h3>
+<p class="text-gray-400 text-sm leading-relaxed">
+                                    Get AI-driven tips and alerts based on your child's unique growth velocity.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Demo Section -->
+<section class="w-full bg-surface-dark/20 py-24 border-y border-surface-dark">
+<div class="layout-content-container max-w-[1280px] px-6 lg:px-20 w-full mx-auto">
+<div class="flex flex-col lg:flex-row gap-12 items-start">
+<!-- Chart Container -->
+<div class="flex-1 w-full bg-[#210F37] rounded-2xl border border-surface-dark p-6 shadow-2xl relative overflow-hidden group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                                    Weight-for-Age Chart
+                                </h3>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded text-xs font-medium bg-surface-dark text-gray-300 cursor-pointer">1Y</span>
+<span class="px-2 py-1 rounded text-xs font-bold bg-primary text-[#210F37] cursor-pointer">3Y</span>
+<span class="px-2 py-1 rounded text-xs font-medium bg-surface-dark text-gray-300 cursor-pointer">5Y</span>
+</div>
+</div>
+<!-- Mock Chart Area -->
+<div class="relative h-[360px] w-full bg-surface-dark/20 rounded-lg border border-surface-dark/50 p-4">
+<!-- Grid -->
+<div class="absolute inset-0 grid grid-cols-6 grid-rows-5 gap-0">
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-r border-gray-800/50"></div><div class="border-b border-gray-800/50"></div>
+<div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class="border-r border-gray-800/50"></div><div class=""></div>
+</div>
+<!-- Standard Curves (Background lines) -->
+<svg class="absolute inset-0 w-full h-full p-4 pointer-events-none opacity-40" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q25,70 50,40 T100,10" fill="none" stroke="#A55B4B" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M0,90 Q25,80 50,55 T100,25" fill="none" stroke="#22c55e" stroke-width="1"></path>
+<path d="M0,95 Q25,90 50,70 T100,45" fill="none" stroke="#A55B4B" stroke-dasharray="4 4" stroke-width="1"></path>
+</svg>
+<!-- Child's Data Curve (Primary) -->
+<svg class="absolute inset-0 w-full h-full p-4 pointer-events-none drop-shadow-xl" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,92 Q25,85 50,58 T100,30" fill="none" stroke="#DCA06D" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="25" cy="85" fill="#DCA06D" r="1.5"></circle>
+<circle cx="50" cy="58" fill="#DCA06D" r="1.5"></circle>
+<circle cx="100" cy="30" fill="#DCA06D" r="1.5"></circle>
+</svg>
+<!-- Tooltip (Static) -->
+<div class="absolute top-[25%] right-[2%] bg-surface-dark border border-primary/30 p-2 rounded shadow-xl">
+<p class="text-[10px] text-gray-400">Sep 2023</p>
+<p class="text-sm font-bold text-white">14.2 kg</p>
+</div>
+</div>
+</div>
+<!-- Sidebar: Insights & Input -->
+<div class="w-full lg:w-[360px] flex flex-col gap-6">
+<!-- Insight Card -->
+<div class="bg-surface-dark rounded-xl p-6 border-l-4 border-accent-detail shadow-lg">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-detail">notifications_active</span>
+<h4 class="font-bold text-white">Actionable Insight</h4>
+</div>
+<span class="text-[10px] bg-[#210F37] text-gray-400 px-2 py-1 rounded">Just now</span>
+</div>
+<p class="text-sm text-gray-300 mb-4">
+                                    Weight gain has slowed slightly this month. This is common for active toddlers.
+                                </p>
+<div class="bg-[#210F37] rounded p-3">
+<p class="text-xs font-bold text-primary mb-1">Recommendation:</p>
+<p class="text-xs text-gray-400">Increase protein intake. Try introducing eggs or legumes in the morning meal.</p>
+</div>
+</div>
+<!-- Data Input Toggle -->
+<div class="bg-surface-dark/50 rounded-xl p-6 border border-surface-dark">
+<h4 class="font-bold text-white mb-4">Data Source</h4>
+<div class="flex bg-[#210F37] p-1 rounded-lg mb-4">
+<button class="flex-1 py-2 text-sm font-bold rounded-md bg-surface-dark text-white shadow-sm">Manual</button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-gray-400 hover:text-white">Partner Sync</button>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<label class="text-sm text-gray-400">Weight (kg)</label>
+<input class="bg-[#210F37] border border-surface-dark rounded px-3 py-1 text-right text-white text-sm w-24 focus:border-primary focus:ring-0" type="text" value="14.2"/>
+</div>
+<div class="flex justify-between items-center">
+<label class="text-sm text-gray-400">Height (cm)</label>
+<input class="bg-[#210F37] border border-surface-dark rounded px-3 py-1 text-right text-white text-sm w-24 focus:border-primary focus:ring-0" type="text" value="92.5"/>
+</div>
+<button class="w-full mt-2 py-2 rounded bg-primary/10 text-primary text-sm font-bold border border-primary/20 hover:bg-primary/20 transition-colors">
+                                        Update Record
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<section class="w-full py-16 px-6 lg:px-20 text-center">
+<div class="max-w-[800px] mx-auto flex flex-col items-center gap-6">
+<h2 class="text-3xl md:text-4xl font-bold text-white">Ready to take charge of their health?</h2>
+<p class="text-gray-400 text-lg max-w-[600px]">
+                        Join thousands of Sri Lankan parents using our digital tools to ensure their children grow happy, healthy, and strong.
+                    </p>
+<button class="mt-4 flex h-14 px-10 items-center justify-center rounded-lg bg-primary hover:bg-primary-hover text-[#210F37] text-lg font-bold shadow-[0_0_20px_rgba(220,162,111,0.3)] transition-all transform hover:-translate-y-1">
+                        Start Tracking for Free
+                    </button>
+<p class="text-xs text-gray-600 mt-4">
+                        Data privacy protected. Compliant with local health regulations.
+                    </p>
+</div>
+</section>
+</main>
+<footer class="w-full border-t border-surface-dark bg-[#1a0b2e] py-8">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-gray-400">
+<span class="material-symbols-outlined text-sm">copyright</span>
+<span class="text-sm">© 2025 Growise. All rights reserved. SDGP CS-149</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-gray-500 hover:text-primary" href="coming.html">Privacy Policy</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="coming.html">Terms of Service</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="index.html#contact">Support</a>
+</div>
+</div>
+</footer>
+</div>
+>>>>>>> d4131ec (Updated some feautures:)
+</body></html>
